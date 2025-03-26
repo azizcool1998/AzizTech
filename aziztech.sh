@@ -100,7 +100,7 @@ install_theme() {
         break
         ;;
       3)
-        THEME_URL=$(echo -e "https://github.com/azizcool1998/AzizTech/raw/main/enigmaz.zip")
+        THEME_URL=$(echo -e "https://github.com/azizcool1998/AzizTech/raw/main/enigma.zip")
         break
         ;; 
       x)
