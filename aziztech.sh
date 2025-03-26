@@ -201,17 +201,6 @@ elif [ "$SELECT_THEME" -eq 3 ]; then
   sudo npm i -g yarn
   cd /var/www/pterodactyl
   sudo yarn upgrade
-  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
-  source ~/.bashrc
-  export NODE_OPTIONS=--openssl-legacy-provider
-  npm_config_yes=true npx yarn-audit-fix
-  nvm install stable
-  npx update-browserslist-db@latest
-  npm install -g npm@latest
-  npm update
-  npm audit fix --force
-  sudo apt update -y && apt upgrade -y
-  sudo apt autoremove --purge -y
   yarn add react-feather
   php artisan migrate
   yarn build:production
