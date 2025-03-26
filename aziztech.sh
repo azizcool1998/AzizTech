@@ -205,22 +205,18 @@ elif [ "$SELECT_THEME" -eq 3 ]; then
   sudo npm i -g yarn
   curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
   source ~/.bashrc
+  export NODE_OPTIONS=--openssl-legacy-provider
+  npm_config_yes=true npx yarn-audit-fix
   nvm install lts/gallium
   nvm install lts/hydrogen
   nvm install lts/iron
   nvm install lts/jod
   nvm install stable
   nvm use stable
-  cd /var/www/pterodactyl
-  export NODE_OPTIONS=--openssl-legacy-provider
   npx update-browserslist-db@latest
-  npm_config_yes=true npx yarn-audit-fix
   npm install -g npm@latest
-  cd /var/www/pterodactyl
   npm update
   npm audit fix --force
-  npx update-browserslist-db@latest
-  npm_config_yes=true npx yarn-audit-fix
   yarn add react-feather
   php artisan migrate
   yarn build:production
