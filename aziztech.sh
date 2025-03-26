@@ -176,7 +176,7 @@ elif [ "$SELECT_THEME" -eq 2 ]; then
 elif [ "$SELECT_THEME" -eq 3 ]; then
   echo -e "                                                       "
   echo -e "${BLUE}[+] =============================================== [+]${NC}"
-  echo -e "${BLUE}[+]                  INSTALASI THEMA                [+]${NC}"
+  echo -e "${BLUE}[+]     ${YELLOW}             INSTALASI THEMA         ${BLUE}      [+]${NC}"
   echo -e "${BLUE}[+] =============================================== [+]${NC}"
   echo -e "                                                                   "
 
