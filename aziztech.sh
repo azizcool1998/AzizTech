@@ -197,7 +197,8 @@ elif [ "$SELECT_THEME" -eq 3 ]; then
   sudo apt autoremove --purge -y
   sudo cp -rfT /root/pterodactyl /var/www/pterodactyl
   cd /var/www/pterodactyl
-  curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash -
+  sudo yarn upgrade
+  sudo curl -sL https://deb.nodesource.com/setup_20.x | sudo -E bash -
   sudo curl -sL https://deb.nodesource.com/setup_20.x -o nodesource_setup.sh
   sudo bash nodesource_setup.sh
   sudo apt-get install nodejs -y
@@ -224,7 +225,6 @@ elif [ "$SELECT_THEME" -eq 3 ]; then
   php artisan migrate
   yarn build:production
   php artisan view:clear
-  sudo rm /var/www/pterodactyl/enigmaz.zip
   sudo rm /root/enigmaz.zip
   sudo rm -rf /root/pterodactyl
 
