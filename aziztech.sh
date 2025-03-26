@@ -196,8 +196,14 @@ elif [ "$SELECT_THEME" -eq 3 ]; then
 
   sudo cp -rfT /root/pterodactyl /var/www/pterodactyl
   curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash -
-  sudo apt install -y nodejs
+  sudo curl -sL https://deb.nodesource.com/setup_20.x -o nodesource_setup.sh
+  sudo bash nodesource_setup.sh
+  sudo apt-get install nodejs -y
   sudo npm i -g yarn
+  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+  source ~/.bashrc
+  nvm install stable
+  nvm use stable
   cd /var/www/pterodactyl
   export NODE_OPTIONS=--openssl-legacy-provider
   npx update-browserslist-db@latest
@@ -205,6 +211,8 @@ elif [ "$SELECT_THEME" -eq 3 ]; then
   npm install -g npm@latest
   npm update
   npm audit fix --force
+  npx update-browserslist-db@latest
+  npm_config_yes=true npx yarn-audit-fix
   yarn add react-feather
   php artisan migrate
   yarn build:production
