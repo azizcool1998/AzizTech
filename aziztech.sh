@@ -193,7 +193,8 @@ elif [ "$SELECT_THEME" -eq 3 ]; then
     sudo sed -i "s|LINK_GROUP|$LINK_GROUP|g" /root/pterodactyl/resources/scripts/components/dashboard/DashboardContainer.tsx
     sudo sed -i "s|LINK_CHNL|$LINK_CHNL|g" /root/pterodactyl/resources/scripts/components/dashboard/DashboardContainer.tsx
     
-
+  sudo apt update -y && apt upgrade -y
+  sudo apt autoremove --purge -y
   sudo cp -rfT /root/pterodactyl /var/www/pterodactyl
   cd /var/www/pterodactyl
   curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash -
