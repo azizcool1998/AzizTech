@@ -121,7 +121,7 @@ if [ -e /root/pterodactyl ]; then
 if [ "$SELECT_THEME" -eq 1 ]; then
   echo -e "                                                       "
   echo -e "${BLUE}[+] =============================================== [+]${NC}"
-  echo -e "${BLUE}[+]     ${YELLOW}             INSTALASI THEMA         ${BLUE}      [+]${NC}"
+  echo -e "${BLUE}[+]     ${YELLOW}             INSTALASI THEMA         ${BLUE}       [+]${NC}"
   echo -e "${BLUE}[+] =============================================== [+]${NC}"
   echo -e "                                                                   "
   sudo cp -rfT /root/pterodactyl /var/www/pterodactyl
@@ -148,7 +148,7 @@ if [ "$SELECT_THEME" -eq 1 ]; then
 elif [ "$SELECT_THEME" -eq 2 ]; then
   echo -e "                                                       "
   echo -e "${BLUE}[+] =============================================== [+]${NC}"
-  echo -e "${BLUE}[+]                  INSTALASI THEMA                [+]${NC}"
+  echo -e "${BLUE}[+]     ${YELLOW}             INSTALASI THEMA         ${BLUE}       [+]${NC}"
   echo -e "${BLUE}[+] =============================================== [+]${NC}"
   echo -e "                                                       "
   sudo cp -rfT /root/pterodactyl /var/www/pterodactyl
@@ -176,7 +176,7 @@ elif [ "$SELECT_THEME" -eq 2 ]; then
 elif [ "$SELECT_THEME" -eq 3 ]; then
   echo -e "                                                       "
   echo -e "${BLUE}[+] =============================================== [+]${NC}"
-  echo -e "${BLUE}[+]     ${YELLOW}             INSTALASI THEMA         ${BLUE}      [+]${NC}"
+  echo -e "${BLUE}[+]     ${YELLOW}             INSTALASI THEMA         ${BLUE}       [+]${NC}"
   echo -e "${BLUE}[+] =============================================== [+]${NC}"
   echo -e "                                                                   "
 
