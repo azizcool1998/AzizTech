@@ -231,7 +231,7 @@ uninstall_theme() {
   echo -e "${BLUE}[+]                    DELETE THEME                 [+]${NC}"
   echo -e "${BLUE}[+] =============================================== [+]${NC}"
   echo -e "                                                       "
-  bash <(curl https://github.com/azizcool1998/AzizTech/blob/2f232dc2f904cbfb064459816b42cb9908d9b995/uninstalltheme.sh)
+  bash <(curl https://github.com/azizcool1998/AzizTech/main/uninstalltheme.sh)
   echo -e "                                                       "
   echo -e "${GREEN}[+] =============================================== [+]${NC}"
   echo -e "${GREEN}[+]                 DELETE THEME SUKSES             [+]${NC}"
