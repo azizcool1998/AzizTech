@@ -194,7 +194,7 @@ elif [ "$SELECT_THEME" -eq 3 ]; then
     sudo sed -i "s|LINK_CHNL|$LINK_CHNL|g" /root/pterodactyl/resources/scripts/components/dashboard/DashboardContainer.tsx
   
   sudo cp -rfT /root/pterodactyl /var/www/pterodactyl
-  sudo curl -sL https://deb.nodesource.com/setup_20.x | sudo -E bash -
+  sudo curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash -
   sudo apt-get install nodejs -y
   sudo npm i -g yarn
   cd /var/www/pterodactyl
