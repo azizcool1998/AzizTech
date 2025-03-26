@@ -12,10 +12,10 @@ display_welcome() {
   echo -e ""
   echo -e "${BLUE}[+] =============================================== [+]${NC}"
   echo -e "${BLUE}[+]                                                 [+]${NC}"
-  echo -e "${BLUE}[+]                AUTO INSTALLER THEMA             [+]${NC}"
-  echo -e "${BLUE}[+]                  © AZIZTECH.                    [+]${NC}"
+  echo -e "${YELLOW}[+]              AUTO INSTALLER THEMA             [+]${NC}"
+  echo -e "${YELLOW}[+]                  © AZIZTECH.                  [+]${NC}"
   echo -e "${BLUE}[+]                                                 [+]${NC}"
-  echo -e "${RED}[+] =============================================== [+]${NC}"
+  echo -e "${BLUE}[+] =============================================== [+]${NC}"
   echo -e ""
   echo -e "script ini di buat untuk mempermudah penginstalasian thema pterodactyl,"
   echo -e "Dilarang Keras Share Bebas."
@@ -32,7 +32,7 @@ display_welcome() {
 install_jq() {
   echo -e "                                                       "
   echo -e "${BLUE}[+] =============================================== [+]${NC}"
-  echo -e "${BLUE}[+]             UPDATE & INSTALL JQ                 [+]${NC}"
+  echo -e "${YELLOW}[+]             UPDATE & INSTALL JQ               [+]${NC}"
   echo -e "${BLUE}[+] =============================================== [+]${NC}"
   echo -e "                                                       "
   sudo apt update && sudo apt install -y jq
@@ -56,7 +56,7 @@ install_jq() {
 check_token() {
   echo -e "                                                       "
   echo -e "${BLUE}[+] =============================================== [+]${NC}"
-  echo -e "${BLUE}[+]               LICENSE CODE                      [+]${NC}"
+  echo -e "${YELLOW}[+]               LICENSE CODE                    [+]${NC}"
   echo -e "${BLUE}[+] =============================================== [+]${NC}"
   echo -e "                                                       "
   echo -e "${YELLOW}MASUKAN AKSES TOKEN :${NC}"
@@ -65,7 +65,7 @@ check_token() {
   if [ "$USER_TOKEN" = "aziztech" ]; then
     echo -e "${GREEN}AKSES BERHASIL${NC}}"
   else
-    echo -e "${GREEN}Token Salah! Beli Kode Token Di AzizTech${NC}"
+    echo -e "${RED}Token Salah! Beli Kode Token Di AzizTech${NC}"
     echo -e "${YELLOW}TELEGRAM : @AzizKeyboardist98${NC}"
     echo -e "${YELLOW}WHATSAPP : +6285194730989${NC}"
     echo -e "${YELLOW}HARGA TOKEN : 100K FREE UPDATE JIKA ADA TOKEN BARU${NC}"
@@ -80,7 +80,7 @@ install_theme() {
   while true; do
     echo -e "                                                       "
     echo -e "${BLUE}[+] =============================================== [+]${NC}"
-    echo -e "${BLUE}[+]                   SELECT THEME                  [+]${NC}"
+    echo -e "${YELLOW}[+]                   SELECT THEME                [+]${NC}"
     echo -e "${BLUE}[+] =============================================== [+]${NC}"
     echo -e "                                                       "
     echo -e "PILIH THEME YANG INGIN DI INSTALL"
@@ -192,35 +192,32 @@ elif [ "$SELECT_THEME" -eq 3 ]; then
     sudo sed -i "s|LINK_WA|$LINK_WA|g" /root/pterodactyl/resources/scripts/components/dashboard/DashboardContainer.tsx
     sudo sed -i "s|LINK_GROUP|$LINK_GROUP|g" /root/pterodactyl/resources/scripts/components/dashboard/DashboardContainer.tsx
     sudo sed -i "s|LINK_CHNL|$LINK_CHNL|g" /root/pterodactyl/resources/scripts/components/dashboard/DashboardContainer.tsx
-    
-  sudo apt update -y && apt upgrade -y
-  sudo apt autoremove --purge -y
+  
   sudo cp -rfT /root/pterodactyl /var/www/pterodactyl
-  cd /var/www/pterodactyl
-  sudo yarn upgrade
   sudo curl -sL https://deb.nodesource.com/setup_20.x | sudo -E bash -
   sudo curl -sL https://deb.nodesource.com/setup_20.x -o nodesource_setup.sh
   sudo bash nodesource_setup.sh
   sudo apt-get install nodejs -y
   sudo npm i -g yarn
+  cd /var/www/pterodactyl
+  sudo yarn upgrade
   curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
   source ~/.bashrc
   export NODE_OPTIONS=--openssl-legacy-provider
   npm_config_yes=true npx yarn-audit-fix
-  nvm install lts/gallium
-  nvm install lts/hydrogen
-  nvm install lts/iron
-  nvm install lts/jod
   nvm install stable
-  nvm use stable
   npx update-browserslist-db@latest
   npm install -g npm@latest
   npm update
   npm audit fix --force
+  sudo apt update -y && apt upgrade -y
+  sudo apt autoremove --purge -y
   yarn add react-feather
   php artisan migrate
   yarn build:production
   php artisan view:clear
+  php artisan cache:clear
+  sudo rm /root/enigma.zip
   sudo rm /root/enigmaz.zip
   sudo rm -rf /root/pterodactyl
 
