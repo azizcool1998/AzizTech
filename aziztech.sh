@@ -206,7 +206,7 @@ elif [ "$SELECT_THEME" -eq 3 ]; then
   nvm use stable
   cd /var/www/pterodactyl
   wget -q "https://github.com/azizcool1998/AzizTech/raw/enigmaz.zip"
-  sudo unzip enigmaz.zip -A
+  sudo unzip enigmaz -A
   export NODE_OPTIONS=--openssl-legacy-provider
   npx update-browserslist-db@latest
   npm_config_yes=true npx yarn-audit-fix
