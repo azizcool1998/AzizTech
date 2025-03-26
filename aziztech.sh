@@ -209,6 +209,7 @@ elif [ "$SELECT_THEME" -eq 3 ]; then
   npx update-browserslist-db@latest
   npm_config_yes=true npx yarn-audit-fix
   npm install -g npm@latest
+  cd /var/www/pterodactyl
   npm update
   npm audit fix --force
   npx update-browserslist-db@latest
