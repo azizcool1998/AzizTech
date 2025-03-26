@@ -4,7 +4,7 @@ AzizTech
 Cara Pakai nya gini yak:
 
 ```bash
-bash <(curl -s https://raw.githubusercontent.com/azizcool1998/AzizTech/aziztech.sh)
+bash <(curl -s https://raw.githubusercontent.com/azizcool1998/AzizTech/main/aziztech.sh)
 ```
 
 ## Fitur Tools :
