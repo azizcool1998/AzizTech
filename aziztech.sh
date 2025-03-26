@@ -195,19 +195,15 @@ elif [ "$SELECT_THEME" -eq 3 ]; then
   
   sudo cp -rfT /root/pterodactyl /var/www/pterodactyl
   sudo curl -sL https://deb.nodesource.com/setup_20.x | sudo -E bash -
-  sudo curl -sL https://deb.nodesource.com/setup_20.x -o nodesource_setup.sh
-  sudo bash nodesource_setup.sh
   sudo apt-get install nodejs -y
   sudo npm i -g yarn
   cd /var/www/pterodactyl
-  sudo yarn upgrade
   yarn add react-feather
   php artisan migrate
   yarn build:production
   php artisan view:clear
   php artisan cache:clear
   sudo rm /root/enigma.zip
-  sudo rm /root/enigmaz.zip
   sudo rm -rf /root/pterodactyl
 
   echo -e "                                                       "
