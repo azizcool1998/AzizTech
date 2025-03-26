@@ -12,8 +12,8 @@ display_welcome() {
   echo -e ""
   echo -e "${BLUE}[+] =============================================== [+]${NC}"
   echo -e "${BLUE}[+]                                                 [+]${NC}"
-  echo -e "${YELLOW}[+]              AUTO INSTALLER THEMA               [+]${NC}"
-  echo -e "${YELLOW}[+]                  © AZIZTECH.                    [+]${NC}"
+  echo -e "${BLUE}[+]        ${YELLOW}      AUTO INSTALLER THEMA    ${BLUE}           [+]${NC}"
+  echo -e "${BLUE}[+]        ${YELLOW}          © AZIZTECH.        ${BLUE}            [+]${NC}"
   echo -e "${BLUE}[+]                                                 [+]${NC}"
   echo -e "${BLUE}[+] =============================================== [+]${NC}"
   echo -e ""
@@ -32,7 +32,7 @@ display_welcome() {
 install_jq() {
   echo -e "                                                       "
   echo -e "${BLUE}[+] =============================================== [+]${NC}"
-  echo -e "${YELLOW}[+]             UPDATE & INSTALL JQ                 [+]${NC}"
+  echo -e "${BLUE}[+]      ${YELLOW}         UPDATE & INSTALL JQ      ${BLUE}         [+]${NC}"
   echo -e "${BLUE}[+] =============================================== [+]${NC}"
   echo -e "                                                       "
   sudo apt update && sudo apt install -y jq
@@ -56,7 +56,7 @@ install_jq() {
 check_token() {
   echo -e "                                                       "
   echo -e "${BLUE}[+] =============================================== [+]${NC}"
-  echo -e "${YELLOW}[+]               LICENSE CODE                      [+]${NC}"
+  echo -e "${BLUE}[+]               ${YELLOW}    LICENSE CODE        ${BLUE}              [+]${NC}"
   echo -e "${BLUE}[+] =============================================== [+]${NC}"
   echo -e "                                                       "
   echo -e "${YELLOW}MASUKAN AKSES TOKEN :${NC}"
@@ -80,7 +80,7 @@ install_theme() {
   while true; do
     echo -e "                                                       "
     echo -e "${BLUE}[+] =============================================== [+]${NC}"
-    echo -e "${YELLOW}[+]                   SELECT THEME                  [+]${NC}"
+    echo -e "${BLUE}[+]        ${YELLOW}           SELECT THEME       ${BLUE}           [+]${NC}"
     echo -e "${BLUE}[+] =============================================== [+]${NC}"
     echo -e "                                                       "
     echo -e "PILIH THEME YANG INGIN DI INSTALL"
@@ -121,7 +121,7 @@ if [ -e /root/pterodactyl ]; then
 if [ "$SELECT_THEME" -eq 1 ]; then
   echo -e "                                                       "
   echo -e "${BLUE}[+] =============================================== [+]${NC}"
-  echo -e "${BLUE}[+]                  INSTALASI THEMA               [+]${NC}"
+  echo -e "${BLUE}[+]     ${YELLOW}             INSTALASI THEMA          ${BLUE}      [+]${NC}"
   echo -e "${BLUE}[+] =============================================== [+]${NC}"
   echo -e "                                                                   "
   sudo cp -rfT /root/pterodactyl /var/www/pterodactyl
