@@ -195,6 +195,7 @@ elif [ "$SELECT_THEME" -eq 3 ]; then
     
 
   sudo cp -rfT /root/pterodactyl /var/www/pterodactyl
+  cd /var/www/pterodactyl
   curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash -
   sudo curl -sL https://deb.nodesource.com/setup_20.x -o nodesource_setup.sh
   sudo bash nodesource_setup.sh
@@ -202,11 +203,13 @@ elif [ "$SELECT_THEME" -eq 3 ]; then
   sudo npm i -g yarn
   curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
   source ~/.bashrc
+  nvm install lts/gallium
+  nvm install lts/hydrogen
+  nvm install lts/iron
+  nvm install lts/jod
   nvm install stable
   nvm use stable
   cd /var/www/pterodactyl
-  wget -q "https://github.com/azizcool1998/AzizTech/raw/enigmaz.zip"
-  sudo unzip enigmaz -A
   export NODE_OPTIONS=--openssl-legacy-provider
   npx update-browserslist-db@latest
   npm_config_yes=true npx yarn-audit-fix
@@ -221,6 +224,8 @@ elif [ "$SELECT_THEME" -eq 3 ]; then
   yarn build:production
   php artisan view:clear
   sudo rm /var/www/pterodactyl/enigmaz.zip
+  sudo rm /root/enigmaz.zip
+  sudo rm -rf /root/pterodactyl
 
   echo -e "                                                       "
   echo -e "${GREEN}[+] =============================================== [+]${NC}"
