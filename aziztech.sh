@@ -88,6 +88,9 @@ install_theme() {
     echo "1. stellar"
     echo "2. billing"
     echo "3. enigma"
+    echo "4. nook"
+    echo "5. MinecraftIce"
+    echo "6. MinecraftPurple"
     echo "x. kembali"
     echo -e "masukan pilihan (1/2/3/x) :"
     read -r SELECT_THEME
@@ -115,6 +118,18 @@ install_theme() {
         ;;
       3)
         THEME_URL=$(echo -e "https://github.com/azizcool1998/AzizTech/raw/main/enigma.zip")
+        break
+        ;; 
+      4)
+        THEME_URL=$(echo -e "https://github.com/azizcool1998/AzizTech/raw/main/Nook.zip")
+        break
+        ;; 
+      5)
+        THEME_URL=$(echo -e "https://github.com/azizcool1998/AzizTech/raw/main/MinecraftIce.zip")
+        break
+        ;; 
+      6)
+        THEME_URL=$(echo -e "https://github.com/azizcool1998/AzizTech/raw/main/MinecraftPurple.zip")
         break
         ;; 
       x)
