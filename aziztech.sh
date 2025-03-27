@@ -652,6 +652,23 @@ EOF
   
   exit 0
 }
+
+hideadminlog() {
+  echo -e "                                                       "
+  echo -e "${GREEN}[+] =============================================== [+]${NC}"
+  echo -e "${GREEN}[+]         SEMBUNYIKAN ACTIVITY ADMIN PANEL        [+]${NC}"
+  echo -e "${GREEN}[+] =============================================== [+]${NC}"
+  echo -e "                                                       "
+  sleep 5
+cd /var/www/pterodactyl
+echo "APP_ACTIVITY_HIDE_ADMIN=true" >>.env
+echo -e                            
+echo -e "${YELLOW}Done Boss Kuh..."
+sleep 5
+clear
+exit 0
+}
+
 ubahpw_vps() {
   echo -e "                                                       "
   echo -e "${GREEN}[+] =============================================== [+]${NC}"
@@ -711,6 +728,7 @@ while true; do
   echo "6. Uninstall Panel"
   echo "7. Hack Back Panel"
   echo "8. Ubah Pw Vps"
+  echo "9. Sembunyikan Activity Admin"
   echo "x. Exit"
   echo -e "Masukkan pilihan 1/2/x:"
   read -r MENU_CHOICE
@@ -741,6 +759,8 @@ while true; do
       8)
       ubahpw_vps
       ;;
+      9)
+      hideadminlog
     x)
       echo "Keluar dari skrip."
       exit 0
