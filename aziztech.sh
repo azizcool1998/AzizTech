@@ -364,6 +364,7 @@ elif [ "$SELECT_THEME" -eq 0 ]; then
   sudo chmod -R 755 storage/* bootstrap/cache
   cd /var/www/pterodactyl
   unset NODE_OPTIONS
+  npx update-browserslist-db@latest
   curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh
   curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
   source ~/.bashrc
@@ -372,7 +373,6 @@ elif [ "$SELECT_THEME" -eq 0 ]; then
   cd /var/www/pterodactyl
   export NODE_OPTIONS=--openssl-legacy-provider
   rm -rf node_modules
-  npx update-browserslist-db@latest
   npm install -g n
   npm install -g npm@latest
   npm install yarn -g
