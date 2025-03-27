@@ -371,6 +371,7 @@ elif [ "$SELECT_THEME" -eq 0 ]; then
   nvm install stable
   nvm install node
   cd /var/www/pterodactyl
+  unset NODE_OPTIONS
   export NODE_OPTIONS=--openssl-legacy-provider
   rm -rf node_modules
   npm install -g n
