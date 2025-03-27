@@ -372,10 +372,10 @@ elif [ "$SELECT_THEME" -eq 0 ]; then
   cd /var/www/pterodactyl
   export NODE_OPTIONS=--openssl-legacy-provider
   rm -rf node_modules
+  npx update-browserslist-db@latest
   npm install -g n
   npm install -g npm@latest
   npm install yarn -g
-  npx update-browserslist-db@latest
   npm rebuild
   apt update -y && apt upgrade -y
   echo -e "Done Boss Kuh..."
