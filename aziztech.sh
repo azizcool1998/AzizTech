@@ -165,6 +165,7 @@ if [ "$SELECT_THEME" -eq 0 ]; then
   sleep 2
   clear
   return
+  exit 0
 
 elif [ "$SELECT_THEME" -eq 1 ]; then
   echo -e "                                                       "
