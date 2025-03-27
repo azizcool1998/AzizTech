@@ -741,25 +741,25 @@ while true; do
     2)
       uninstall_theme
       ;;
-      3)
+    3)
       configure_wings
       ;;
-      4)
+    4)
       create_node
       ;;
-      5)
+    5)
       install_panel
       ;;
-      6)
+    6)
       uninstall_panel
       ;;
-      7)
+    7)
       hackback_panel
       ;;
-      8)
+    8)
       ubahpw_vps
       ;;
-      9)
+    9)
       hideadminlog
       ;;
     x)
