@@ -271,7 +271,6 @@ elif [ "$SELECT_THEME" -eq 4 ]; then
   composer install --no-dev --optimize-autoloader
   sudo apt update -y
   yarn add react-feather
-  php artisan billing:install stable
   php artisan migrate
   yarn build:production
   php artisan view:clear
@@ -305,7 +304,6 @@ elif [ "$SELECT_THEME" -eq 5 ]; then
   composer install --no-dev --optimize-autoloader
   sudo apt update -y
   yarn add react-feather
-  php artisan billing:install stable
   php artisan migrate
   yarn build:production
   php artisan view:clear
@@ -339,7 +337,6 @@ elif [ "$SELECT_THEME" -eq 6 ]; then
   composer install --no-dev --optimize-autoloader
   sudo apt update -y
   yarn add react-feather
-  php artisan billing:install stable
   php artisan migrate
   yarn build:production
   php artisan view:clear
