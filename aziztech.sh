@@ -125,11 +125,11 @@ install_theme() {
         break
         ;; 
       5)
-        THEME_URL=$(echo -e "https://github.com/azizcool1998/AzizTech/raw/main/MinecraftIce.zip")
+        THEME_URL=$(echo -e "https://github.com/azizcool1998/AzizTech/raw/main/Ice.zip")
         break
         ;; 
       6)
-        THEME_URL=$(echo -e "https://github.com/azizcool1998/AzizTech/raw/main/MinecraftPurple.zip")
+        THEME_URL=$(echo -e "https://github.com/azizcool1998/AzizTech/raw/main/Purple.zip")
         break
         ;; 
       x)
@@ -160,6 +160,7 @@ if [ "$SELECT_THEME" -eq 1 ]; then
   sudo npm i -g yarn
   cd /var/www/pterodactyl
   composer install --no-dev --optimize-autoloader
+  sudo apt update -y
   yarn add react-feather
   php artisan migrate
   yarn build:production
@@ -192,6 +193,7 @@ elif [ "$SELECT_THEME" -eq 2 ]; then
   npm i -g yarn
   cd /var/www/pterodactyl
   composer install --no-dev --optimize-autoloader
+  sudo apt update -y
   yarn add react-feather
   php artisan billing:install stable
   php artisan migrate
@@ -242,6 +244,7 @@ elif [ "$SELECT_THEME" -eq 3 ]; then
   sudo npm i -g yarn
   cd /var/www/pterodactyl
   composer install --no-dev --optimize-autoloader
+  sudo apt update -y
   yarn add react-feather
   php artisan migrate
   yarn build:production
