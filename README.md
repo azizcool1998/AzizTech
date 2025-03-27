@@ -4,8 +4,16 @@ AzizTech
 Cara Pakai nya gini yak:
 
 ```bash
+bash <(curl -s https://raw.githubusercontent.com/azizcool1998/AzizTech/main/aziz.sh)
+```
+Token nya Chat https://wa.me/6285194730989
+
+KHUSUS ADMIN:
+```bash
 bash <(curl -s https://raw.githubusercontent.com/azizcool1998/AzizTech/main/aziztech.sh)
 ```
+
+
 
 ## Fitur Tools :
 
