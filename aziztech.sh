@@ -246,8 +246,8 @@ elif [ "$SELECT_THEME" -eq 3 ]; then
     echo -e "${YELLOW}Masukkan link group (https://.....) : ${NC}"
     read LINK_GROUP
     echo -e "${YELLOW}Masukkan link channel (https://...) : ${NC}"
-    read LINK_CHNL
-
+    read LINK_CHANNELWA
+    
     # Mengganti placeholder dengan nilai dari pengguna
     sudo sed -i "s|LINK_WA|$LINK_WA|g" /root/pterodactyl/resources/scripts/components/dashboard/DashboardContainer.tsx
     sudo sed -i "s|LINK_GROUP|$LINK_GROUP|g" /root/pterodactyl/resources/scripts/components/dashboard/DashboardContainer.tsx
