@@ -417,11 +417,11 @@ uninstall_theme() {
 install_themeSteeler() {
 #!/bin/bash
 
-echo -e "                                                       "
+echo -e "                                                        "
 echo -e "${BLUE}[+] =============================================== [+]${NC}"
 echo -e "${BLUE}[+]     ${YELLOW}             INSTALASI THEMA         ${BLUE}       [+]${NC}"
 echo -e "${BLUE}[+] =============================================== [+]${NC}"
-echo -e "                                                                   "
+echo -e "                                                        "
 
 # Unduh file tema
 wget -O /root/stellar.zip https://github.com/SkyzoOffc/Pterodactyl-Theme-Autoinstaller/raw/main/stellar.zip
@@ -449,11 +449,11 @@ php artisan view:clear
 sudo rm /root/stellar.zip
 sudo rm -rf /root/pterodactyl
 
-echo -e "                                                       "
+echo -e "                                                         "
 echo -e "${GREEN}[+] =============================================== [+]${NC}"
 echo -e "${GREEN}[+]                   INSTALL SUCCESS               [+]${NC}"
 echo -e "${GREEN}[+] =============================================== [+]${NC}"
-echo -e ""
+echo -e "                                                         "
 sleep 2
 clear
 exit 0
@@ -572,18 +572,18 @@ hackback_panel() {
   echo -e "                                                       "
   # Minta input dari pengguna
 read -p "Masukkan Username Panel: " user
-read -p "password login " psswdhb
+read -p "password login " password
   #!/bin/bash
 cd /var/www/pterodactyl || { echo "Direktori tidak ditemukan"; exit 1; }
 
 # Membuat lokasi baru
 php artisan p:user:make <<EOF
 yes
-hackback@gmail.com
+$user@gmail.com
 $user
 $user
 $user
-$psswdhb
+$password
 EOF
   echo -e "                                                       "
   echo -e "${GREEN}[+] =============================================== [+]${NC}"
