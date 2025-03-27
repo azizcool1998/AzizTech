@@ -108,6 +108,8 @@ install_theme() {
         npm install
         npm rebuild
         echo -e "Done Boss Kuh..."
+        break
+        ;;
       1)
         THEME_URL=$(echo -e "https://github.com/azizcool1998/AzizTech/raw/main/stellar.zip")
         break
