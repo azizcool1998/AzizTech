@@ -374,8 +374,13 @@ elif [ "$SELECT_THEME" -eq 0 ]; then
   curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh
   curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
   source ~/.bashrc  
+  sleep 2
+  cd
+  sleep 2
   nvm install stable
+  sleep 2
   nvm install node
+  sleep 2
   cd /var/www/pterodactyl
   export NODE_OPTIONS=--openssl-legacy-provider
   rm -rf node_modules
