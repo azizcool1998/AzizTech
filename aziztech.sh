@@ -365,13 +365,13 @@ elif [ "$SELECT_THEME" -eq 0 ]; then
   echo -e "${BLUE}[+] =============================================== [+]${NC}"
   echo -e "                                                       "
   cd /var/www/pterodactyl
+  unset NODE_OPTIONS
   curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh
   curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
   source ~/.bashrc
   nvm install stable
   nvm install node
   cd /var/www/pterodactyl
-  unset NODE_OPTIONS
   export NODE_OPTIONS=--openssl-legacy-provider
   rm -rf node_modules
   npm install -g n
