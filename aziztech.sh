@@ -96,18 +96,8 @@ install_theme() {
     read -r SELECT_THEME
     case "$SELECT_THEME" in
       0)
+        echo -e "OTW Boss Kuh..."
         cd /var/www/pterodactyl
-        curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh
-        curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
-        source ~/.bashrc
-        nvm install stable
-        nvm install node
-        cd /var/www/pterodactyl
-        export NODE_OPTIONS=--openssl-legacy-provider
-        rm -rf node_modules
-        npm install
-        npm rebuild
-        echo -e "Done Boss Kuh..."
         break
         ;;
       1)
@@ -149,7 +139,34 @@ if [ -e /root/pterodactyl ]; then
   wget -q "$THEME_URL"
   sudo unzip -o "$(basename "$THEME_URL")"
   
-if [ "$SELECT_THEME" -eq 1 ]; then
+if [ "$SELECT_THEME" -eq 0 ]; then
+  echo -e "                                                       "
+  echo -e "${BLUE}[+] =============================================== [+]${NC}"
+  echo -e "${BLUE}[+]     ${YELLOW}             INSTALASI THEMA         ${BLUE}       [+]${NC}"
+  echo -e "${BLUE}[+] =============================================== [+]${NC}"
+  echo -e "                                                       
+  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh
+  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+  source ~/.bashrc
+  nvm install stable
+  nvm install node
+  cd /var/www/pterodactyl
+  export NODE_OPTIONS=--openssl-legacy-provider
+  rm -rf node_modules
+  npm install
+  npm rebuild
+  echo -e "Done Boss Kuh..."
+
+  echo -e "                                                       "
+  echo -e "${GREEN}[+] =============================================== [+]${NC}"
+  echo -e "${GREEN}[+]                   INSTALL SUCCESS               [+]${NC}"
+  echo -e "${GREEN}[+] =============================================== [+]${NC}"
+  echo -e ""
+  sleep 2
+  clear
+  return
+
+elif [ "$SELECT_THEME" -eq 1 ]; then
   echo -e "                                                       "
   echo -e "${BLUE}[+] =============================================== [+]${NC}"
   echo -e "${BLUE}[+]     ${YELLOW}             INSTALASI THEMA         ${BLUE}       [+]${NC}"
@@ -180,7 +197,7 @@ if [ "$SELECT_THEME" -eq 1 ]; then
   echo -e ""
   sleep 2
   clear
-  exit 0
+  return
 
 elif [ "$SELECT_THEME" -eq 2 ]; then
   echo -e "                                                       "
