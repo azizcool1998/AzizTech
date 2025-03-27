@@ -88,7 +88,7 @@ install_theme() {
     echo "1. stellar"
     echo "2. billing"
     echo "3. enigma"
-    echo "4. nook"
+    echo "4. NookTheme"
     echo "5. MinecraftIce"
     echo "6. MinecraftPurple"
     echo "x. kembali"
