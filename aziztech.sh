@@ -375,6 +375,7 @@ elif [ "$SELECT_THEME" -eq 0 ]; then
   npm install -g n
   npm install -g npm@latest
   npm install yarn -g
+  npx update-browserslist-db@latest
   npm rebuild
   apt update -y && apt upgrade -y
   echo -e "Done Boss Kuh..."
