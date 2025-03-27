@@ -365,6 +365,7 @@ elif [ "$SELECT_THEME" -eq 0 ]; then
   cd /var/www/pterodactyl
   unset NODE_OPTIONS
   npx update-browserslist-db@latest
+  cd
   curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh
   curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
   source ~/.bashrc
@@ -377,6 +378,7 @@ elif [ "$SELECT_THEME" -eq 0 ]; then
   npm install -g npm@latest
   npm install yarn -g
   npm rebuild
+  cd
   apt update -y && apt upgrade -y
   echo -e "Done Boss Kuh..."
 
