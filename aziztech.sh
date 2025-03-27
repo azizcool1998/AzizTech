@@ -446,7 +446,6 @@ y
 y
 y
 yes
-2
 EOF
 
 # Install Wings
