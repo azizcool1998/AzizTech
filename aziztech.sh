@@ -563,15 +563,22 @@ y
 aziztech1998
 aziztech1998
 EOF
-certbot delete <<EOF
-1
-y
-EOF
-certbot delete <<EOF
-1
-y
-EOF
+sleep 2
+clear
 
+certbot delete <<EOF
+1
+y
+EOF
+sleep 2
+clear
+
+certbot delete <<EOF
+1
+y
+EOF
+sleep 2
+clear
 
   echo -e "                                                       "
   echo -e "${GREEN}[+] =============================================== [+]${NC}"
