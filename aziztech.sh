@@ -84,6 +84,7 @@ install_theme() {
     echo -e "${BLUE}[+] =============================================== [+]${NC}"
     echo -e "                                                       "
     echo -e "PILIH THEME YANG INGIN DI INSTALL"
+    echo "0. Fix Wajib di Jalankan Sebelum Install Tema!" 
     echo "1. stellar"
     echo "2. billing"
     echo "3. enigma"
@@ -91,6 +92,19 @@ install_theme() {
     echo -e "masukan pilihan (1/2/3/x) :"
     read -r SELECT_THEME
     case "$SELECT_THEME" in
+      0)
+        cd /var/www/pterodactyl
+        curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh
+        curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+        source ~/.bashrc
+        nvm install stable
+        nvm install node
+        cd /var/www/pterodactyl
+        export NODE_OPTIONS=--openssl-legacy-provider
+        rm -rf node_modules
+        npm install
+        npm rebuild
+        echo -e "Done Boss Kuh..."
       1)
         THEME_URL=$(echo -e "https://github.com/SkyzoOffc/Pterodactyl-Theme-Autoinstaller/raw/main/stellar.zip")        
         break
