@@ -92,7 +92,7 @@ install_theme() {
     echo "5. MinecraftIce"
     echo "6. MinecraftPurple"
     echo "x. kembali"
-    echo -e "masukan pilihan (1/2/3/x) :"
+    echo -e "masukan pilihan (0/1/2/3/4/5/6/x) :"
     read -r SELECT_THEME
     case "$SELECT_THEME" in
       0)
