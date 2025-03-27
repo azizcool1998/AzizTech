@@ -373,6 +373,7 @@ elif [ "$SELECT_THEME" -eq 0 ]; then
   cd
   curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh
   curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+  sleep 2
   source ~/.bashrc  
   sleep 2
   cd
