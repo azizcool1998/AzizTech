@@ -164,6 +164,9 @@ if [ "$SELECT_THEME" -eq 1 ]; then
   php artisan migrate
   yarn build:production
   php artisan view:clear
+  chown -R www-data:www-data /var/www/pterodactyl/*
+  php artisan queue:restart
+  php artisan up
   sudo rm /root/stellar.zip
   sudo rm -rf /root/pterodactyl
 
@@ -194,6 +197,9 @@ elif [ "$SELECT_THEME" -eq 2 ]; then
   php artisan migrate
   yarn build:production
   php artisan view:clear
+  chown -R www-data:www-data /var/www/pterodactyl/*
+  php artisan queue:restart
+  php artisan up
   sudo rm /root/billing.zip
   sudo rm -rf /root/pterodactyl
 
@@ -241,6 +247,9 @@ elif [ "$SELECT_THEME" -eq 3 ]; then
   yarn build:production
   php artisan view:clear
   php artisan cache:clear
+  chown -R www-data:www-data /var/www/pterodactyl/*
+  php artisan queue:restart
+  php artisan up
   sudo rm /root/enigma.zip
   sudo rm -rf /root/pterodactyl
   sudo rm -rf /var/www/pterodactyl/pterodactyl
