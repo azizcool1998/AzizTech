@@ -97,7 +97,6 @@ install_theme() {
     case "$SELECT_THEME" in
       0)
         echo -e "OTW Boss Kuh..."
-        cd /var/www/pterodactyl
         break
         ;;
       1)
@@ -145,6 +144,7 @@ if [ "$SELECT_THEME" -eq 0 ]; then
   echo -e "${BLUE}[+]     ${YELLOW}             INSTALASI THEMA         ${BLUE}       [+]${NC}"
   echo -e "${BLUE}[+] =============================================== [+]${NC}"
   echo -e "                                                       
+  cd /var/www/pterodactyl
   curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh
   curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
   source ~/.bashrc
