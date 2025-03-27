@@ -467,6 +467,7 @@ y
 EOF
 
 # Buat Akun Admin
+cd /var/www/pterodactyl
 php artisan p:user:make <<EOF
 yes
 admin@gmail.com
