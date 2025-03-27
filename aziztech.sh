@@ -95,8 +95,7 @@ install_theme() {
     echo -e "masukan pilihan (0/1/2/3/4/5/6/x) :"
     read -r SELECT_THEME
     case "$SELECT_THEME" in
-      0)
-        echo -e "OTW Boss Kuh..."
+      y)
         break
         ;;
       1)
@@ -138,36 +137,7 @@ if [ -e /root/pterodactyl ]; then
   wget -q "$THEME_URL"
   sudo unzip -o "$(basename "$THEME_URL")"
   
-if [ "$SELECT_THEME" -eq y ]; then
-  echo -e "                                                       "
-  echo -e "${BLUE}[+] =============================================== [+]${NC}"
-  echo -e "${BLUE}[+]     ${YELLOW}             INSTALASI THEMA         ${BLUE}       [+]${NC}"
-  echo -e "${BLUE}[+] =============================================== [+]${NC}"
-  echo -e "                                                       
-  cd /var/www/pterodactyl
-  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh
-  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
-  source ~/.bashrc
-  nvm install stable
-  nvm install node
-  cd /var/www/pterodactyl
-  export NODE_OPTIONS=--openssl-legacy-provider
-  rm -rf node_modules
-  npm install
-  npm rebuild
-  echo -e "Done Boss Kuh..."
-
-  echo -e "                                                       "
-  echo -e "${GREEN}[+] =============================================== [+]${NC}"
-  echo -e "${GREEN}[+]                   INSTALL SUCCESS               [+]${NC}"
-  echo -e "${GREEN}[+] =============================================== [+]${NC}"
-  echo -e ""
-  sleep 2
-  clear
-  return
-  exit 0
-
-elif [ "$SELECT_THEME" -eq 1 ]; then
+if [ "$SELECT_THEME" -eq 1 ]; then
   echo -e "                                                       "
   echo -e "${BLUE}[+] =============================================== [+]${NC}"
   echo -e "${BLUE}[+]     ${YELLOW}             INSTALASI THEMA         ${BLUE}       [+]${NC}"
@@ -387,6 +357,34 @@ elif [ "$SELECT_THEME" -eq 6 ]; then
   clear
   return
 
+elif [ "$SELECT_THEME" -eq y ]; then
+  echo -e "                                                       "
+  echo -e "${BLUE}[+] =============================================== [+]${NC}"
+  echo -e "${BLUE}[+]     ${YELLOW}             INSTALASI THEMA         ${BLUE}       [+]${NC}"
+  echo -e "${BLUE}[+] =============================================== [+]${NC}"
+  echo -e "                                                       
+  cd /var/www/pterodactyl
+  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh
+  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+  source ~/.bashrc
+  nvm install stable
+  nvm install node
+  cd /var/www/pterodactyl
+  export NODE_OPTIONS=--openssl-legacy-provider
+  rm -rf node_modules
+  npm install
+  npm rebuild
+  echo -e "Done Boss Kuh..."
+
+  echo -e "                                                       "
+  echo -e "${GREEN}[+] =============================================== [+]${NC}"
+  echo -e "${GREEN}[+]                   INSTALL SUCCESS               [+]${NC}"
+  echo -e "${GREEN}[+] =============================================== [+]${NC}"
+  echo -e ""
+  sleep 2
+  clear
+  return
+  
 else
   echo ""
   echo "Pilihan tidak valid. silahkan pilih 1/2/3/4/5/6."
