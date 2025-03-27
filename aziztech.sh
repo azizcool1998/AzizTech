@@ -761,6 +761,7 @@ while true; do
       ;;
       9)
       hideadminlog
+      ;;
     x)
       echo "Keluar dari skrip."
       exit 0
