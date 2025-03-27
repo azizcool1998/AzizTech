@@ -502,13 +502,12 @@ create_node() {
 #!/bin/bash
 
 # Minta input dari pengguna
-read -p "Masukkan nama lokasi: " location_name
-read -p "Masukkan deskripsi lokasi: " location_description
-read -p "Masukkan domain: " domain
-read -p "Masukkan nama node: " node_name
+read -p "Masukkan Nama Lokasi: " location_name
+read -p "Masukkan Deskripsi Lokasi: " location_description
+read -p "Masukkan Link Node: " nodelink
+read -p "Masukkan Nama Node: " node_name
 read -p "Masukkan RAM (dalam MB): " ram
 read -p "Masukkan jumlah maksimum disk space (dalam MB): " disk_space
-read -p "Masukkan Locid: " locid
 
 # Ubah ke direktori pterodactyl
 cd /var/www/pterodactyl || { echo "Direktori tidak ditemukan"; exit 1; }
@@ -523,17 +522,17 @@ EOF
 php artisan p:node:make <<EOF
 $node_name
 $location_description
-$locid
+1
 https
-$domain
+$nodelink
 yes
 no
 no
 $ram
-$ram
+0
 $disk_space
-$disk_space
-100
+0
+1024
 8080
 2022
 /var/lib/pterodactyl/volumes
