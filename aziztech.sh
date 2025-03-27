@@ -414,12 +414,12 @@ uninstall_theme() {
   sleep 2
   clear
 }
-install_themeSteeler() {
+install_panel() {
 #!/bin/bash
 
 echo -e "                                                        "
 echo -e "${BLUE}[+] =============================================== [+]${NC}"
-echo -e "${BLUE}[+]     ${YELLOW}             INSTALASI THEMA         ${BLUE}       [+]${NC}"
+echo -e "${BLUE}[+]     ${YELLOW}             INSTALL PANEL           ${BLUE}       [+]${NC}"
 echo -e "${BLUE}[+] =============================================== [+]${NC}"
 echo -e "                                                        "
 
@@ -522,9 +522,26 @@ uninstall_panel() {
   echo -e "${BLUE}[+] =============================================== [+]${NC}"
   echo -e "                                                       "
 
+# Minta input dari pengguna
+read -p "* What would you like to do?
+* [0] Install the panel
+* [1] Install Wings
+* [2] Install both [0] and [1] on the same machine (wings script runs after panel)
+* [3] Install panel with canary version of the script (the versions that lives in master, may be broken!)
+* [4] Install Wings with canary version of the script (the versions that lives in master, may be broken!)
+* [5] Install both [3] and [4] on the same machine (wings script runs after panel)
+* [6] Uninstall panel or wings with canary version of the script (the versions that lives in master, may be broken!)
+* Input 0-6: " uninstall
+read -p "Hapus Panel? y/n: " uninstall1
+read -p "Hapus Wings? y/n: " uninstall2
+read -p "Yakin dan Lanjutkan?: " uninstall3
+read -p "Masukkan RAM (dalam MB): " ram
+read -p "Masukkan jumlah maksimum disk space (dalam MB): " disk_space
+read -p "Masukkan Locid: " locid
 
+# Uninstall Panel
 bash <(curl -s https://pterodactyl-installer.se) <<EOF
-y
+6
 y
 y
 y
@@ -649,8 +666,8 @@ while true; do
   echo "2. Uninstall theme"
   echo "3. Configure Wings"
   echo "4. Create Node"
-  echo "5. Uninstall Panel"
-  echo "6. Stellar Theme"
+  echo "5. Install Panel"
+  echo "6. Uninstall Panel"
   echo "7. Hack Back Panel"
   echo "8. Ubah Pw Vps"
   echo "x. Exit"
@@ -672,10 +689,10 @@ while true; do
       create_node
       ;;
       5)
-      uninstall_panel
+      install_panel
       ;;
       6)
-      install_themeSteeler
+      uninstall_panel
       ;;
       7)
       hackback_panel
