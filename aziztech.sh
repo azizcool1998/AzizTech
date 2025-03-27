@@ -376,8 +376,7 @@ elif [ "$SELECT_THEME" -eq 0 ]; then
   sleep 2
   source ~/.bashrc  
   sleep 2
-  cd
-  sleep 2
+  
   nvm install stable
   sleep 2
   nvm install node
