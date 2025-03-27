@@ -423,31 +423,63 @@ echo -e "${BLUE}[+]     ${YELLOW}             INSTALL PANEL           ${BLUE}   
 echo -e "${BLUE}[+] =============================================== [+]${NC}"
 echo -e "                                                        "
 
-# Unduh file tema
-wget -O /root/stellar.zip https://github.com/SkyzoOffc/Pterodactyl-Theme-Autoinstaller/raw/main/stellar.zip
+# Minta input dari pengguna
+read -p "Masukkan Link Panel (cth: subdomain.domain.com): " linkpanel
+read -p "Masukkan Link Node (cth: node.subdomain.domain.com): " linknode
 
+# Install Panel
+bash <(curl -s https://pterodactyl-installer.se) <<EOF
+0
+aziztech1998
+aziztech1998
+aziztech1998
+Asia/Makassar
+aziztech1998@gmail.com
+aziztech@gmail.com
+aziztech
+AzizTech
+AzizTech
+aziztech
+$linkpanel
+y
+y
+y
+y
+yes
+2
+EOF
 
-# Ekstrak file tema
-unzip /root/stellar.zip -d /root/pterodactyl
+# Install Wings
+bash <(curl -s https://pterodactyl-installer.se) <<EOF
+1
+y
+y
+y
+$linkpanel
+y
+aziztech1998
+aziztech1998
+y
+$linknode
+y
+aziztech1998@gmail.com
+y
+EOF
 
-# Salin tema ke direktori Pterodactyl
-sudo cp -rfT /root/pterodactyl /var/www/pterodactyl
+# Buat Akun Admin
+php artisan p:user:make <<EOF
+yes
+admin@gmail.com
+admin
+Admin
+Admin
+admin
+EOF
 
-# Instal Node.js dan Yarn
-curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash -
-sudo apt install -y nodejs
-sudo npm i -g yarn
-
-# Instal dependensi dan build tema
-cd /var/www/pterodactyl
-yarn add react-feather
-php artisan migrate
-yarn build:production
-php artisan view:clear
-
-# Hapus file dan direktori sementara
-sudo rm /root/stellar.zip
-sudo rm -rf /root/pterodactyl
+clear
+echo -e "DONE BOSS KUH..."
+sleep 5
+clear
 
 echo -e "                                                         "
 echo -e "${GREEN}[+] =============================================== [+]${NC}"
@@ -522,28 +554,21 @@ uninstall_panel() {
   echo -e "${BLUE}[+] =============================================== [+]${NC}"
   echo -e "                                                       "
 
-# Minta input dari pengguna
-read -p "* What would you like to do?
-* [0] Install the panel
-* [1] Install Wings
-* [2] Install both [0] and [1] on the same machine (wings script runs after panel)
-* [3] Install panel with canary version of the script (the versions that lives in master, may be broken!)
-* [4] Install Wings with canary version of the script (the versions that lives in master, may be broken!)
-* [5] Install both [3] and [4] on the same machine (wings script runs after panel)
-* [6] Uninstall panel or wings with canary version of the script (the versions that lives in master, may be broken!)
-* Input 0-6: " uninstall
-read -p "Hapus Panel? y/n: " uninstall1
-read -p "Hapus Wings? y/n: " uninstall2
-read -p "Yakin dan Lanjutkan?: " uninstall3
-read -p "Masukkan RAM (dalam MB): " ram
-read -p "Masukkan jumlah maksimum disk space (dalam MB): " disk_space
-read -p "Masukkan Locid: " locid
-
 # Uninstall Panel
 bash <(curl -s https://pterodactyl-installer.se) <<EOF
 6
 y
 y
+y
+aziztech1998
+aziztech1998
+EOF
+certbot delete <<EOF
+1
+y
+EOF
+certbot delete <<EOF
+1
 y
 EOF
 
