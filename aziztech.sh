@@ -242,7 +242,7 @@ elif [ "$SELECT_THEME" -eq 3 ]; then
   composer install --no-dev --optimize-autoloader
   sudo apt update -y
   yarn add react-feather
-  php artisan migrate
+  php artisan migrate --seed --force
   yarn build:production
   php artisan view:clear
   php artisan cache:clear
