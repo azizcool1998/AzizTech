@@ -84,7 +84,7 @@ install_theme() {
     echo -e "${BLUE}[+] =============================================== [+]${NC}"
     echo -e "                                                       "
     echo -e "PILIH THEME YANG INGIN DI INSTALL"
-    echo "y. Fix Wajib di Jalankan Sebelum Install Tema!" 
+    echo "0. Fix Wajib di Jalankan Sebelum Install Tema!" 
     echo "1. stellar"
     echo "2. billing"
     echo "3. enigma"
