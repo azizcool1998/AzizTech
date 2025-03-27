@@ -144,6 +144,7 @@ if [ "$SELECT_THEME" -eq 1 ]; then
   echo -e "${BLUE}[+] =============================================== [+]${NC}"
   echo -e "                                                                   "
   sudo cp -rfT /root/pterodactyl /var/www/pterodactyl
+  cd
   sudo chmod -R 755 storage/* bootstrap/cache
   curl -sL https://deb.nodesource.com/setup_18.x | sudo -E bash -
   sudo apt install -y nodejs
@@ -178,6 +179,7 @@ elif [ "$SELECT_THEME" -eq 2 ]; then
   echo -e "${BLUE}[+] =============================================== [+]${NC}"
   echo -e "                                                       "
   sudo cp -rfT /root/pterodactyl /var/www/pterodactyl
+  cd
   sudo chmod -R 755 storage/* bootstrap/cache
   curl -sL https://deb.nodesource.com/setup_18.x | sudo -E bash -
   sudo apt install -y nodejs
@@ -226,6 +228,7 @@ elif [ "$SELECT_THEME" -eq 3 ]; then
     sudo sed -i "s|LINK_CHNL|$LINK_CHNL|g" /root/pterodactyl/resources/scripts/components/dashboard/DashboardContainer.tsx
 
   sudo cp -rfT /root/pterodactyl /var/www/pterodactyl
+  cd
   sudo chmod -R 755 storage/* bootstrap/cache
   sudo mkdir -p /etc/apt/keyrings
   curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | sudo gpg --dearmor -o /etc/apt/keyrings/nodesource.gpg
@@ -263,6 +266,7 @@ elif [ "$SELECT_THEME" -eq 4 ]; then
   echo -e "${BLUE}[+] =============================================== [+]${NC}"
   echo -e "                                                       "
   sudo cp -rfT /root/pterodactyl /var/www/pterodactyl
+  cd
   sudo chmod -R 755 storage/* bootstrap/cache
   curl -sL https://deb.nodesource.com/setup_18.x | sudo -E bash -
   sudo apt install -y nodejs
@@ -296,6 +300,7 @@ elif [ "$SELECT_THEME" -eq 5 ]; then
   echo -e "${BLUE}[+] =============================================== [+]${NC}"
   echo -e "                                                       "
   sudo cp -rfT /root/pterodactyl /var/www/pterodactyl
+  cd
   sudo chmod -R 755 storage/* bootstrap/cache
   curl -sL https://deb.nodesource.com/setup_18.x | sudo -E bash -
   sudo apt install -y nodejs
@@ -329,6 +334,7 @@ elif [ "$SELECT_THEME" -eq 6 ]; then
   echo -e "${BLUE}[+] =============================================== [+]${NC}"
   echo -e "                                                       "
   sudo cp -rfT /root/pterodactyl /var/www/pterodactyl
+  cd
   sudo chmod -R 755 storage/* bootstrap/cache
   curl -sL https://deb.nodesource.com/setup_18.x | sudo -E bash -
   sudo apt install -y nodejs
@@ -361,6 +367,7 @@ elif [ "$SELECT_THEME" -eq 0 ]; then
   echo -e "${BLUE}[+]     ${YELLOW}             INSTALASI THEMA         ${BLUE}       [+]${NC}"
   echo -e "${BLUE}[+] =============================================== [+]${NC}"
   echo -e "                                                       "
+  cd
   sudo chmod -R 755 storage/* bootstrap/cache
   cd /var/www/pterodactyl
   unset NODE_OPTIONS
