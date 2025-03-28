@@ -706,7 +706,7 @@ while true; do
   echo -e "${RED}                                                                        ${NC}"
   echo -e "${RED}                                                                        ${NC}"
   echo -e "${RED}                                                                        ${NC}"
-  echo -e "${RED}  ╭━━━━━━━╮   ╭━━━━━━━╮ ╭━━╮ ╭━━━━━━━╮  --------------------------- ${NC}"
+  echo -e "${RED}  ╭━━━━━━━╮     ╭━━━━━━━╮ ╭━━╮ ╭━━━━━━━╮  --------------------------- ${NC}"
   echo -e "${RED}  ┃ ╭━━━╮ ┃ ╰━━━╮  ╭╯ ╰━━╯ ╰━━━╮  ╭╯    Auto Installer AzizTech   ${NC}"
   echo -e "${RED}  ┃ ┃ ╱ ┃ ┃    ╭╯ ╭╯  ╭━━╮     ╭╯ ╭╯    --------------------------- ${NC}"
   echo -e "${RED}  ┃ ╰━━━╯ ┃   ╭╯ ╭╯    ┃  ┃   ╭╯ ╭╯        • Telegram : AzizTech     ${NC}"
