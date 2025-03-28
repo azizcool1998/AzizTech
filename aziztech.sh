@@ -714,7 +714,6 @@ while true; do
   echo -e "${RED}  ┃ ╰━━━╯ ┃   ╭╯ ╭╯   ┃  ┃   ╭╯ ╭╯        • Telegram : AzizTech     ${NC}"
   echo -e "${RED}  ┃ ╭━━━╮ ┃ ╭╯  ╰━━━╮ ┃  ┃ ╭╯  ╰━━━╮      • Creadit  : AzizTech     ${NC}"
   echo -e "${RED}  ╰━╯   ╰━╯ ╰━━━━━━━╯ ╰━━╯ ╰━━━━━━━╯      • Support by AzizTech     ${NC}"
-  echo -e "${RED}                                                                        ${NC}"
   echo -e "                                                                           "
   echo -e "BERIKUT LIST INSTALL :"
   echo "1. Install theme"
