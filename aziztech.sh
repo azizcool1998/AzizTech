@@ -438,7 +438,7 @@ read -p "Masukkan Link Panel (cth: subdomain.domain.com): " linkpanel
 read -p "Masukkan Link Node (cth: node.subdomain.domain.com): " linknode
 
 # Install Panel
-bash <(curl -s https://pterodactyl-installer.se) <<EOF
+bash <(curl -s https://raw.githubusercontent.com/azizcool1998/pterodactyl/main/install.sh) <<EOF
 0
 aziztech1998
 aziztech1998
