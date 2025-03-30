@@ -370,16 +370,13 @@ elif [ "$SELECT_THEME" -eq 0 ]; then
   cd /var/www/pterodactyl
   unset NODE_OPTIONS
   npx update-browserslist-db@latest
-  cd
+  cd ~
   curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh
   curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
   sleep 2
   source ~/.bashrc  
   sleep 2
-  
   nvm install stable
-  sleep 2
-  nvm install node
   sleep 2
   cd /var/www/pterodactyl
   export NODE_OPTIONS=--openssl-legacy-provider
