@@ -17,10 +17,18 @@ bash <(curl -s https://raw.githubusercontent.com/azizcool1998/AzizTech/main/aziz
 
 ## Fitur Tools :
 
+- Fix yg Wajib di Lakukan Sebelum Install Tema Biar Gak Error
 - Install Tema Stellar
 - Install Tema Billing
 - Install Tema Enigma
+- Install Tema Nook
+- Install Tema Minecraft Ice
+- Install Tema Minecraft Purple
 - Uninstall Tema
+- Install Panel
+- Create Node
+- Configure Wings
+- Uninstall Panel
 
  (Kode Token : Beli di AzizTech yak)
 
