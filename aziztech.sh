@@ -458,27 +458,6 @@ nvm install stable
 
 sudo kill -9 $(sudo lsof -t -i:80)
 
-certbot certonly -d $linkpanel <<EOF
-1
-aziztech1998@gmail.com
-y
-y
-EOF
-
-sudo kill -9 $(sudo lsof -t -i:80)
-
-certbot certonly --standalone -d $linknode
-
-certbot delete <<EOF
-1
-y
-EOF
-
-certbot delete <<EOF
-1
-y
-EOF
-
 # Install Panel
 bash <(curl -s https://raw.githubusercontent.com/azizcool1998/pterodactyl/main/install.sh) <<EOF
 0
