@@ -437,9 +437,12 @@ read -p "Masukkan Link Node (cth: node.subdomain.domain.com): " linknode
 # Prepare Awal
 cd ~
 sudo apt update -y
+sudo apt purge nginx -y
+sudo apt purge certbot -y
 sudo apt autoremove --purge
 sudo apt-get install nginx -y
 sudo apt-get install certbot -y
+sudo apt update -y && apt upgrade -y
 curl -sL https://deb.nodesource.com/setup_20.x -o nodesource_setup.sh
 sudo bash nodesource_setup.sh
 sudo apt install nodejs -y
@@ -453,9 +456,16 @@ nvm install lts/iron
 nvm install lts/jod
 nvm install stable
 
-certbot certonly --standalone -d $linkpanel
+certbot certonly -d $linkpanel <<EOF
+1
+aziztech1998@gmail.com
+y
+y
+EOF
 
-certbot certonly --standalone -d $linknode
+certbot certonly -d $linknode <<
+1
+EOF
 
 certbot delete <<EOF
 1
