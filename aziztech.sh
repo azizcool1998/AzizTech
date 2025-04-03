@@ -453,6 +453,7 @@ nvm install lts/hydrogen
 nvm install lts/iron
 nvm install lts/jod
 nvm install stable
+sudo kill -9 $(sudo lsof -t -i:80)
 
 certbot certonly -d $linkpanel <<EOF
 1
