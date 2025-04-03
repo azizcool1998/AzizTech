@@ -437,10 +437,8 @@ read -p "Masukkan Link Node (cth: node.subdomain.domain.com): " linknode
 # Prepare Awal
 cd ~
 sudo apt update -y
-sudo apt purge nginx -y
 sudo apt purge certbot -y
 sudo apt autoremove --purge -y
-sudo apt-get install nginx -y
 sudo apt-get install certbot -y
 sudo apt update -y && apt upgrade -y
 curl -sL https://deb.nodesource.com/setup_20.x -o nodesource_setup.sh
