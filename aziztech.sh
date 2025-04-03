@@ -463,7 +463,7 @@ y
 y
 EOF
 
-certbot certonly -d $linknode <<
+certbot certonly -d $linknode <<EOF
 1
 EOF
 
