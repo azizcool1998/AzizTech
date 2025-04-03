@@ -62,7 +62,7 @@ check_token() {
   echo -e "${YELLOW}MASUKAN AKSES TOKEN :${NC}"
   read -r USER_TOKEN
 
-  if [ "$USER_TOKEN" = "aziztech" ]; then
+  if [ "$USER_TOKEN" = "q" ]; then
     echo -e "${GREEN}AKSES BERHASIL${NC}}"
   else
     echo -e "${RED}Token Salah! Beli Kode Token Di AzizTech${NC}"
