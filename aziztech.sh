@@ -434,6 +434,34 @@ echo -e "                                                        "
 read -p "Masukkan Link Panel (cth: subdomain.domain.com): " linkpanel
 read -p "Masukkan Link Node (cth: node.subdomain.domain.com): " linknode
 
+# Prepare Awal
+cd ~
+sudo apt update -y
+sudo apt autoremove --purge
+sudo apt-get install nginx -y
+sudo apt-get install certbot -y
+curl -sL https://deb.nodesource.com/setup_20.x -o nodesource_setup.sh
+sudo bash nodesource_setup.sh
+sudo apt install nodejs -y
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+source ~/.bashrc
+nvm install node
+nvm install lts/gallium
+nvm install lts/hydrogen
+nvm install lts/iron
+nvm install lts/jod
+nvm install stable
+certbot certonly -d $linkpanel <<EOF
+1
+aziztech1998@gmail.com
+EOF
+certbot certonly -d $linknode <<EOF
+1
+y
+y
+EOF
+
 # Install Panel
 bash <(curl -s https://raw.githubusercontent.com/azizcool1998/pterodactyl/main/install.sh) <<EOF
 0
