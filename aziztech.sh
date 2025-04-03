@@ -453,19 +453,9 @@ nvm install lts/iron
 nvm install lts/jod
 nvm install stable
 
-certbot certonly -d $linkpanel <<EOF
-1
-aziztech1998@gmail.com
-y
-y
-EOF
+certbot certonly --standalone -d $linkpanel
 
-certbot certonly -d $linknode <<EOF
-1
-aziztech1998@gmail.com
-y
-y
-EOF
+certbot certonly --standalone -d $linknode
 
 certbot delete <<EOF
 1
