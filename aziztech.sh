@@ -462,16 +462,13 @@ aziztech1998@gmail.com
 y
 y
 EOF
-
 certbot certonly -d $linknode <<EOF
 1
 EOF
-
 certbot delete <<EOF
 1
 y
 EOF
-
 certbot delete <<EOF
 1
 y
