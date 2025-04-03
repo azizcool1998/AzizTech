@@ -453,6 +453,7 @@ nvm install lts/hydrogen
 nvm install lts/iron
 nvm install lts/jod
 nvm install stable
+
 sudo kill -9 $(sudo lsof -t -i:80)
 
 certbot certonly -d $linkpanel <<EOF
@@ -461,6 +462,8 @@ aziztech1998@gmail.com
 y
 y
 EOF
+
+sudo kill -9 $(sudo lsof -t -i:80)
 
 certbot certonly --standalone -d $linknode
 
