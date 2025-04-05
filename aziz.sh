@@ -745,7 +745,6 @@ while true; do
   echo "6. Uninstall Panel"
   echo "7. Hack Back Panel"
   echo "8. Ubah Pw Vps"
-  echo "9. Sembunyikan Activity Admin"
   echo "x. Exit"
   echo -e "Masukkan pilihan 1/2/x:"
   read -r MENU_CHOICE
