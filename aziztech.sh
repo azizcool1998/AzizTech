@@ -468,11 +468,6 @@ AzizTech
 AzizTech
 aziztech
 $linkpanel
-y
-y
-y
-y
-yes
 EOF
 
 # Install Wings
