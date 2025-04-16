@@ -503,6 +503,8 @@ echo -e "                                                        "
 read -p "Masukkan Link Panel (cth: subdomain.domain.com): " linkpanel
 read -p "Masukkan Link Node (cth: node.subdomain.domain.com): " linknode
 
+sudo kill -9 $(sudo lsof -t -i:80)
+
 # Install Wings
 bash <(curl -s https://pterodactyl-installer.se) <<EOF
 1
@@ -512,7 +514,7 @@ y
 $linkpanel
 y
 aziztech1998
-pukipuki1
+aziztech1998
 y
 $linknode
 y
