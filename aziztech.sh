@@ -475,9 +475,7 @@ yes
 A
 EOF
 
-
-
-
+clear
 echo -e "DONE BOSS KUH..."
 sleep 5
 clear
@@ -514,7 +512,7 @@ y
 $linkpanel
 y
 aziztech1998
-aziztech1998
+pukipuki1
 y
 $linknode
 y
@@ -533,6 +531,19 @@ Admin
 admin
 EOF
 
+clear
+echo -e "DONE BOSS KUH..."
+sleep 5
+clear
+
+echo -e "                                                         "
+echo -e "${GREEN}[+] =============================================== [+]${NC}"
+echo -e "${GREEN}[+]                   INSTALL SUCCESS               [+]${NC}"
+echo -e "${GREEN}[+] =============================================== [+]${NC}"
+echo -e "                                                         "
+sleep 2
+clear
+exit 0
 
 }
 create_node() {
