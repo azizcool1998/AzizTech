@@ -449,12 +449,8 @@ sudo apt install nodejs -y
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 source ~/.bashrc
-nvm install node
-nvm install lts/gallium
-nvm install lts/hydrogen
-nvm install lts/iron
-nvm install lts/jod
-nvm install stable
+sudo nvm install node
+sudo nvm install stable
 
 sudo kill -9 $(sudo lsof -t -i:80)
 
