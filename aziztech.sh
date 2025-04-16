@@ -467,6 +467,12 @@ AzizTech
 AzizTech
 aziztech
 $linkpanel
+y
+y
+y
+y
+yes
+A
 EOF
 
 
