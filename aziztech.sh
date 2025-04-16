@@ -432,7 +432,6 @@ echo -e "                                                        "
 
 # Minta input dari pengguna
 read -p "Masukkan Link Panel (cth: subdomain.domain.com): " linkpanel
-read -p "Masukkan Link Node (cth: node.subdomain.domain.com): " linknode
 
 # Prepare Awal
 cd ~
@@ -470,6 +469,36 @@ aziztech
 $linkpanel
 EOF
 
+
+
+
+echo -e "DONE BOSS KUH..."
+sleep 5
+clear
+
+echo -e "                                                         "
+echo -e "${GREEN}[+] =============================================== [+]${NC}"
+echo -e "${GREEN}[+]                   INSTALL SUCCESS               [+]${NC}"
+echo -e "${GREEN}[+] =============================================== [+]${NC}"
+echo -e "                                                         "
+sleep 2
+clear
+exit 0
+
+}
+install_wings() {
+#!/bin/bash
+
+echo -e "                                                        "
+echo -e "${BLUE}[+] =============================================== [+]${NC}"
+echo -e "${BLUE}[+]     ${YELLOW}             INSTALL WINGS           ${BLUE}       [+]${NC}"
+echo -e "${BLUE}[+] =============================================== [+]${NC}"
+echo -e "                                                        "
+
+# Minta input dari pengguna
+read -p "Masukkan Link Panel (cth: subdomain.domain.com): " linkpanel
+read -p "Masukkan Link Node (cth: node.subdomain.domain.com): " linknode
+
 # Install Wings
 bash <(curl -s https://pterodactyl-installer.se) <<EOF
 1
@@ -498,19 +527,6 @@ Admin
 admin
 EOF
 
-clear
-echo -e "DONE BOSS KUH..."
-sleep 5
-clear
-
-echo -e "                                                         "
-echo -e "${GREEN}[+] =============================================== [+]${NC}"
-echo -e "${GREEN}[+]                   INSTALL SUCCESS               [+]${NC}"
-echo -e "${GREEN}[+] =============================================== [+]${NC}"
-echo -e "                                                         "
-sleep 2
-clear
-exit 0
 
 }
 create_node() {
@@ -759,15 +775,18 @@ while true; do
       install_panel
       ;;
     6)
-      uninstall_panel
+      install_wings
       ;;
     7)
-      hackback_panel
+      uninstall_panel
       ;;
     8)
-      ubahpw_vps
+      hackback_panel
       ;;
     9)
+      ubahpw_vps
+      ;;
+    10)
       hideadminlog
       ;;
     x)
