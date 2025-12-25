@@ -74,3 +74,12 @@ Masukkan Nama Nest dan Deskripsi nya
 Kembali Ke Nest Lalu Import Egg
 
 #Opsional Tema
+Buka Bash Ku
+Masukkan Nomor 1 untuk Masuk Ke Menu Tema
+Pilih Nomor 0 Dulu, Lakukan Sebanyak 2x yak
+
+Lalu Silahkan Pilih Tema yg Disukai, Selesai.
+
+Terakhir Nih Bonus
+Jgn Lupa Ganti Password VPS nya yak
+Biar Gak di Colong Sama Seller VPS nya :v
