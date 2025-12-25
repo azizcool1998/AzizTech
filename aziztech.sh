@@ -127,7 +127,7 @@ install_theme() {
         THEME_URL=$(echo -e "https://github.com/azizcool1998/AzizTech/raw/main/enigma999.zip")
         break
         ;; 
-      vinn)
+      88)
         THEME_URL=$(echo -e "https://github.com/azizcool1998/AzizTech/raw/main/enigmajir.zip")
         break
         ;; 
@@ -416,7 +416,7 @@ elif [ "$SELECT_THEME" -eq 999 ]; then
   return
 
 
-elif [ "$SELECT_THEME" -eq vinn ]; then
+elif [ "$SELECT_THEME" -eq 88 ]; then
   echo -e "                                                       "
   echo -e "${BLUE}[+] =============================================== [+]${NC}"
   echo -e "${BLUE}[+]     ${YELLOW}             INSTALASI THEMA         ${BLUE}       [+]${NC}"
