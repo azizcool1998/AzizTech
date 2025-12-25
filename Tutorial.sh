@@ -34,3 +34,17 @@ Lalu Enter
 #Ketik ini Lagi
 apt update -y && apt upgrade -y
 
+# Download and install nvm:
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
+
+# in lieu of restarting the shell
+\. "$HOME/.nvm/nvm.sh"
+
+# Download and install Node.js:
+nvm install 25
+
+#Gunakan Bash Ku Lalu Install Panel nya
+bash <(curl -s https://raw.githubusercontent.com/azizcool1998/AzizTech/main/aziztech.sh)
+
+pilih nomor 5
+masukkan link panel nya
