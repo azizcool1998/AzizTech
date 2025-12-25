@@ -56,7 +56,8 @@ Lanjut Create Node nya dgn Buka Bash itu Lagi, Pilih Nomor 4
 Masukkan Link Node nya Aja
 
 Lanjut Buka Panel nya, Login Akun dgn Username admin dan Password nya admin
-buka Admin Control Panel, Buka Tab Node, Buka Node nya, Buka Tab Configuration, Pencet Generate Token, Salin Mulai dari "cd ... Sampai Akhir Ujung Kanan nya"
+buka Admin Control Panel, Buka Tab Node, Buka Node nya, Buka Tab Configuration
+Pencet Generate Token, Salin Mulai dari "cd ... Sampai Akhir Ujung Kanan nya"
 
 Kembali Ke Terminal, Buka Bash Ku Lagi, Pilih Nomor 3
 Paste Token Config Node nya
