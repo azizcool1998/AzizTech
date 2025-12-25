@@ -606,11 +606,11 @@ create_node() {
   echo -e "                                                       "
 
 
-echo -e "${YELLOW}read -p "Masukkan Nama Lokasi: " location_name${NC}"
-echo -e "${YELLOW}read -p "Masukkan Deskripsi Lokasi: " location_description${NC}"
-echo -e "${YELLOW}read -p "Masukkan Nama Node: " node_name${NC}"
-echo -e "${YELLOW}read -p "Masukkan RAM (dalam MB): " ram${NC}"
-echo -e "${YELLOW}read -p "Masukkan jumlah maksimum disk space (dalam MB): " disk_space${NC}"
+echo -e "${YELLOW} read -p "Masukkan Nama Lokasi: " location_name${NC}"
+echo -e "${YELLOW} read -p "Masukkan Deskripsi Lokasi: " location_description${NC}"
+echo -e "${YELLOW} read -p "Masukkan Nama Node: " node_name${NC}"
+echo -e "${YELLOW} read -p "Masukkan RAM (dalam MB): " ram${NC}"
+echo -e "${YELLOW} read -p "Masukkan jumlah maksimum disk space (dalam MB): " disk_space${NC}"
   #!/bin/bash
 #!/bin/bash
 
