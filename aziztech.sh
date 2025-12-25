@@ -127,6 +127,10 @@ install_theme() {
         THEME_URL=$(echo -e "https://github.com/azizcool1998/AzizTech/raw/main/enigma999.zip")
         break
         ;; 
+      vinn)
+        THEME_URL=$(echo -e "https://github.com/azizcool1998/AzizTech/raw/main/enigmajir.zip")
+        break
+        ;; 
       x)
         return
         ;;
@@ -356,6 +360,63 @@ elif [ "$SELECT_THEME" -eq 6 ]; then
   return
 
 elif [ "$SELECT_THEME" -eq 999 ]; then
+  echo -e "                                                       "
+  echo -e "${BLUE}[+] =============================================== [+]${NC}"
+  echo -e "${BLUE}[+]     ${YELLOW}             INSTALASI THEMA         ${BLUE}       [+]${NC}"
+  echo -e "${BLUE}[+] =============================================== [+]${NC}"
+  echo -e "                                                                   "
+
+    # Menanyakan informasi kepada pengguna untuk tema Enigma Original 
+    echo -e "${YELLOW}Masukkan link wa (https://wa.me/...) : ${NC}"
+    read LINK_WA
+    echo -e "${YELLOW}Masukkan link group wa (https://.....) : ${NC}"
+    read LINK_GROUP
+    echo -e "${YELLOW}Masukkan link channel wa (https://...) : ${NC}"
+    read LINK_CHANNELWA
+    
+    # Mengganti placeholder dengan nilai dari pengguna
+    sudo sed -i "s|LINK_WA|$LINK_WA|g" /root/pterodactyl/resources/scripts/components/dashboard/DashboardContainer.tsx
+    sudo sed -i "s|LINK_GROUP|$LINK_GROUP|g" /root/pterodactyl/resources/scripts/components/dashboard/DashboardContainer.tsx
+    sudo sed -i "s|LINK_CHNL|$LINK_CHNL|g" /root/pterodactyl/resources/scripts/components/dashboard/DashboardContainer.tsx
+
+# Prepare
+  sudo cp -rfT /root/pterodactyl /var/www/pterodactyl
+  cd
+  sudo mkdir -p /etc/apt/keyrings
+  curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | sudo gpg --dearmor -o /etc/apt/keyrings/nodesource.gpg
+  echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_18.x nodistro main" | sudo tee /etc/apt/sources.list.d/nodesource.list
+  
+
+# Lanjutan
+  cd
+  sudo apt update
+  sudo apt-get install nodejs -y
+  sudo npm i -g yarn
+  cd /var/www/pterodactyl
+  composer install --no-dev --optimize-autoloader
+  sudo apt update -y
+  yarn add react-feather
+  php artisan migrate --seed --force
+  yarn build:production
+  php artisan view:clear
+  php artisan cache:clear
+  chown -R www-data:www-data /var/www/pterodactyl/*
+  php artisan queue:restart
+  php artisan up
+  sudo rm /root/enigma999.zip
+  sudo rm -rf /root/pterodactyl
+
+  echo -e "                                                       "
+  echo -e "${GREEN}[+] =============================================== [+]${NC}"
+  echo -e "${GREEN}[+]                   INSTALL SUCCESS               [+]${NC}"
+  echo -e "${GREEN}[+] =============================================== [+]${NC}"
+  echo -e ""
+  sleep 2
+  clear
+  return
+
+
+elif [ "$SELECT_THEME" -eq vinn ]; then
   echo -e "                                                       "
   echo -e "${BLUE}[+] =============================================== [+]${NC}"
   echo -e "${BLUE}[+]     ${YELLOW}             INSTALASI THEMA         ${BLUE}       [+]${NC}"
