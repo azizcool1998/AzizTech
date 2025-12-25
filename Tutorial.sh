@@ -48,3 +48,10 @@ bash <(curl -s https://raw.githubusercontent.com/azizcool1998/AzizTech/main/aziz
 
 pilih nomor 5
 masukkan link panel nya
+
+buka bash itu lagi, pilih nomor 6 untuk install wings
+masukkan link panel dan link node nya
+
+Lanjut Create Node nya dgn Buka Bash itu Lagi, Pilih Nomor 4
+Masukkan Link Node nya Aja
+
