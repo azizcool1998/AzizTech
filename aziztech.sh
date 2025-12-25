@@ -604,17 +604,18 @@ create_node() {
   echo -e "${BLUE}[+]                    CREATE NODE                  [+]${NC}"
   echo -e "${BLUE}[+] =============================================== [+]${NC}"
   echo -e "                                                       "
-  #!/bin/bash
-#!/bin/bash
 
-read -p "Masukkan Link Node: " nodelink
 
-# Minta input dari pengguna
 echo -e "${YELLOW}read -p "Masukkan Nama Lokasi: " location_name${NC}"
 echo -e "${YELLOW}read -p "Masukkan Deskripsi Lokasi: " location_description${NC}"
 echo -e "${YELLOW}read -p "Masukkan Nama Node: " node_name${NC}"
 echo -e "${YELLOW}read -p "Masukkan RAM (dalam MB): " ram${NC}"
 echo -e "${YELLOW}read -p "Masukkan jumlah maksimum disk space (dalam MB): " disk_space${NC}"
+  #!/bin/bash
+#!/bin/bash
+
+  # Minta input dari pengguna
+read -p "Masukkan Link Node: " nodelink
 
 # Ubah ke direktori pterodactyl
 cd /var/www/pterodactyl || { echo "Direktori tidak ditemukan"; exit 1; }
