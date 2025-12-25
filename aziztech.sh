@@ -522,7 +522,7 @@ y
 y
 y
 yes
-A
+Y
 EOF
 
 clear
