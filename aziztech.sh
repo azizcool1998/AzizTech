@@ -607,36 +607,37 @@ create_node() {
   #!/bin/bash
 #!/bin/bash
 
-# Minta input dari pengguna
-read -p "Masukkan Nama Lokasi: " location_name
-read -p "Masukkan Deskripsi Lokasi: " location_description
 read -p "Masukkan Link Node: " nodelink
-read -p "Masukkan Nama Node: " node_name
-read -p "Masukkan RAM (dalam MB): " ram
-read -p "Masukkan jumlah maksimum disk space (dalam MB): " disk_space
+
+# Minta input dari pengguna
+echo -e "${YELLOW}read -p "Masukkan Nama Lokasi: " location_name${NC}"
+echo -e "${YELLOW}read -p "Masukkan Deskripsi Lokasi: " location_description${NC}"
+echo -e "${YELLOW}read -p "Masukkan Nama Node: " node_name${NC}"
+echo -e "${YELLOW}read -p "Masukkan RAM (dalam MB): " ram${NC}"
+echo -e "${YELLOW}read -p "Masukkan jumlah maksimum disk space (dalam MB): " disk_space${NC}"
 
 # Ubah ke direktori pterodactyl
 cd /var/www/pterodactyl || { echo "Direktori tidak ditemukan"; exit 1; }
 
 # Membuat lokasi baru
 php artisan p:location:make <<EOF
-$location_name
-$location_description
+AzizTech
+AzizTech
 EOF
 
 # Membuat node baru
 php artisan p:node:make <<EOF
-$node_name
-$location_description
+AzizTech
+AzizTech
 1
 https
 $nodelink
 yes
 no
 no
-$ram
+16384
 0
-$disk_space
+204800
 0
 1024
 8080
