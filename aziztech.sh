@@ -758,7 +758,8 @@ hideadminlog() {
   echo -e "                                                       "
   sleep 5
 cd /var/www/pterodactyl
-echo "\n APP_ACTIVITY_HIDE_ADMIN=true" >>.env
+echo " " >>.env
+echo "APP_ACTIVITY_HIDE_ADMIN=true" >>.env
 echo -e                            
 echo -e "${YELLOW}Done Boss Kuh..."
 sleep 5
