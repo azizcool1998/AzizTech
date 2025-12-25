@@ -55,3 +55,22 @@ masukkan link panel dan link node nya
 Lanjut Create Node nya dgn Buka Bash itu Lagi, Pilih Nomor 4
 Masukkan Link Node nya Aja
 
+Lanjut Buka Panel nya, Login Akun dgn Username admin dan Password nya admin
+buka Admin Control Panel, Buka Tab Node, Buka Node nya, Buka Tab Configuration, Pencet Generate Token, Salin Mulai dari "cd ... Sampai Akhir Ujung Kanan nya"
+
+Kembali Ke Terminal, Buka Bash Ku Lagi, Pilih Nomor 3
+Paste Token Config Node nya
+
+Kembali Ke Panel Bagian Node, Pencet Tab Allocation
+Masukkan IP nya Pakai "0.0.0.0" Aja
+Masukkan Nama Allocation nya
+Masukkan Port nya "1950-2021" Aja
+Lalu di Lanjutkan
+
+#Egg Bot WA
+Masuk Ke Tab Nest di Admin Control Panel
+Pencet Create Nest
+Masukkan Nama Nest dan Deskripsi nya
+Kembali Ke Nest Lalu Import Egg
+
+#Opsional Tema
