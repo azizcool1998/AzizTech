@@ -576,7 +576,7 @@ aziztech@gmail.com
 aziztech
 AzizTech
 AzizTech
-aziztech
+pukipuki
 $linkpanel
 y
 y
@@ -598,7 +598,7 @@ echo -e "${GREEN}[+] =============================================== [+]${NC}"
 echo -e "                                                         "
 sleep 2
 clear
-exit 0
+return
 
 }
 install_wings() {
@@ -656,7 +656,7 @@ echo -e "${GREEN}[+] =============================================== [+]${NC}"
 echo -e "                                                         "
 sleep 2
 clear
-exit 0
+return
 
 }
 create_node() {
@@ -714,7 +714,7 @@ EOF
   echo -e "                                                       "
   sleep 2
   clear
-  exit 0
+  return
 }
 uninstall_panel() {
   echo -e "                                                       "
