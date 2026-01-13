@@ -582,11 +582,9 @@ y
 y
 y
 y
-yes
-Y
 EOF
 
-clear
+
 echo -e "DONE BOSS KUH..."
 sleep 5
 clear
