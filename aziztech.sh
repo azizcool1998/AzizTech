@@ -35,7 +35,7 @@ install_jq() {
   echo -e "${BLUE}[+]      ${YELLOW}         UPDATE & INSTALL JQ      ${BLUE}         [+]${NC}"
   echo -e "${BLUE}[+] =============================================== [+]${NC}"
   echo -e "                                                       "
-  sudo apt update && sudo apt install -y jq
+  sudo apt update -y && sudo apt install -y jq
   if [ $? -eq 0 ]; then
     echo -e "                                                       "
     echo -e "${GREEN}[+] =============================================== [+]${NC}"
@@ -154,7 +154,7 @@ if [ "$SELECT_THEME" -eq 1 ]; then
   echo -e "                                                                   "
   sudo cp -rfT /root/pterodactyl /var/www/pterodactyl
   cd
-  curl -sL https://deb.nodesource.com/setup_18.x | sudo -E bash -
+  curl -sL https://deb.nodesource.com/setup_22.x | sudo -E bash -
   sudo apt install -y nodejs
   sudo npm i -g yarn
   cd /var/www/pterodactyl
@@ -188,7 +188,7 @@ elif [ "$SELECT_THEME" -eq 2 ]; then
   echo -e "                                                       "
   sudo cp -rfT /root/pterodactyl /var/www/pterodactyl
   cd
-  curl -sL https://deb.nodesource.com/setup_18.x | sudo -E bash -
+  curl -sL https://deb.nodesource.com/setup_22.x | sudo -E bash -
   sudo apt install -y nodejs
   npm i -g yarn
   cd /var/www/pterodactyl
@@ -228,8 +228,11 @@ elif [ "$SELECT_THEME" -eq 3 ]; then
   cd
   sudo mkdir -p /etc/apt/keyrings
   curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | sudo gpg --dearmor -o /etc/apt/keyrings/nodesource.gpg
-  echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_18.x nodistro main" | sudo tee /etc/apt/sources.list.d/nodesource.list
+  echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_22.x nodistro main" | sudo tee /etc/apt/sources.list.d/nodesource.list
+  curl -sL https://deb.nodesource.com/setup_22.x | sudo -E bash -
   
+
+
 
 # Lanjutan
   cd
@@ -268,7 +271,7 @@ elif [ "$SELECT_THEME" -eq 4 ]; then
   sudo cp -rfT /root/pterodactyl /var/www/pterodactyl
   cd /var/www/pterodactyl
   sudo chmod -R 755 storage/* bootstrap/cache
-  curl -sL https://deb.nodesource.com/setup_18.x | sudo -E bash -
+  curl -sL https://deb.nodesource.com/setup_22.x | sudo -E bash -
   sudo apt install -y nodejs
   npm i -g yarn
   cd /var/www/pterodactyl
@@ -301,7 +304,7 @@ elif [ "$SELECT_THEME" -eq 5 ]; then
   echo -e "                                                       "
   sudo cp -rfT /root/pterodactyl /var/www/pterodactyl
   cd
-  curl -sL https://deb.nodesource.com/setup_18.x | sudo -E bash -
+  curl -sL https://deb.nodesource.com/setup_22.x | sudo -E bash -
   sudo apt install -y nodejs
   npm i -g yarn
   cd /var/www/pterodactyl
@@ -334,7 +337,7 @@ elif [ "$SELECT_THEME" -eq 6 ]; then
   echo -e "                                                       "
   sudo cp -rfT /root/pterodactyl /var/www/pterodactyl
   cd
-  curl -sL https://deb.nodesource.com/setup_18.x | sudo -E bash -
+  curl -sL https://deb.nodesource.com/setup_22.x | sudo -E bash -
   sudo apt install -y nodejs
   npm i -g yarn
   cd /var/www/pterodactyl
@@ -384,7 +387,9 @@ elif [ "$SELECT_THEME" -eq 999 ]; then
   cd
   sudo mkdir -p /etc/apt/keyrings
   curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | sudo gpg --dearmor -o /etc/apt/keyrings/nodesource.gpg
-  echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_18.x nodistro main" | sudo tee /etc/apt/sources.list.d/nodesource.list
+  echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_22.x nodistro main" | sudo tee /etc/apt/sources.list.d/nodesource.list
+  curl -sL https://deb.nodesource.com/setup_22.x | sudo -E bash -
+  
   
 
 # Lanjutan
@@ -441,7 +446,10 @@ elif [ "$SELECT_THEME" -eq 88 ]; then
   cd
   sudo mkdir -p /etc/apt/keyrings
   curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | sudo gpg --dearmor -o /etc/apt/keyrings/nodesource.gpg
-  echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_18.x nodistro main" | sudo tee /etc/apt/sources.list.d/nodesource.list
+  echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_22.x nodistro main" | sudo tee /etc/apt/sources.list.d/nodesource.list
+  curl -sL https://deb.nodesource.com/setup_22.x | sudo -E bash -
+  
+
   
 
 # Lanjutan
@@ -553,7 +561,7 @@ sudo apt autoremove --purge -y
 sudo apt-get install certbot -y
 sudo apt-get install nginx -y
 sudo apt update -y && apt upgrade -y
-curl -sL https://deb.nodesource.com/setup_20.x -o nodesource_setup.sh
+curl -sL https://deb.nodesource.com/setup_22.x -o nodesource_setup.sh
 sudo bash nodesource_setup.sh
 sudo apt install nodejs -y
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh
